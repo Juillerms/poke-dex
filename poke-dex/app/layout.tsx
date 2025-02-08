@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <main className="flex min-h-screen flex-col items-center p-20">
+        <main className="flex min-h-screen flex-col items-center p-5">
           <div className="z-10 w-full max-w-5xl items-center justify-between text-sm lg:flex">
             <Link href="/"><h2 className="text-2x1 text-bold">PokeDex</h2></Link>
           </div>
