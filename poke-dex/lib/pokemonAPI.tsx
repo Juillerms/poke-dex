@@ -14,3 +14,20 @@ export async function getPokemon(name: string ){
     return data;
     
 }
+
+export async function getNextPokemon(id: number) {
+    const nextId = id + 1;
+    return await getPokemon(nextId.toString());
+}
+
+export async function getPreviousPokemon(id: number) {
+    const prevId = id > 1 ? id - 1 : 1;
+    return await getPokemon(prevId.toString());
+}
+
+export async function getPokemonNameById(id: number) {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+    const data = await response.json();
+    return data.name; 
+}
+
